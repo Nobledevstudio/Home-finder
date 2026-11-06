@@ -1,0 +1,257 @@
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  font-size: 24px;
+  font-weight: 800;
+  box-shadow: 0 5px 12px rgba(23, 107, 82, 0.16);
+}
+
+.logo-text {
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.logo-text::after {
+  content: "";
+}
+
+/* Navigation */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-link {
+  color: var(--color-text-light);
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  padding: 10px 0;
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.nav-link.active {
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 10px;
+}
+
+/* Authentication Actions */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-shrink: 0;
+}
+
+.navbar-login {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.navbar-login:hover {
+  color: var(--color-primary);
+}
+
+.navbar-signup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.navbar-signup:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(23, 107, 82, 0.18);
+}
+
+/* Mobile */
+.navbar-toggle,
+.mobile-auth-actions {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar-container {
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .navbar-actions {
+    gap: 18px;
+  }
+
+  .navbar-signup {
+    padding: 11px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 72px;
+  }
+
+  .logo-icon {
+    width: 39px;
+    height: 39px;
+    font-size: 22px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .navbar-actions {
+    display: none;
+  }
+
+  .navbar-toggle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    transition: var(--transition);
+  }
+
+  .navbar-toggle:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+  }
+
+  .navbar-nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: var(--color-white);
+    padding: 20px;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+  }
+
+  .navbar-nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+
+  .nav-link {
+    padding: 12px 10px;
+    border-radius: 7px;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: var(--color-secondary);
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  .mobile-auth-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid var(--color-border);
+    padding-top: 18px;
+  }
+
+  .mobile-login-link {
+    padding: 10px;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .mobile-signup {
+    width: 100%;
+  }
+}
