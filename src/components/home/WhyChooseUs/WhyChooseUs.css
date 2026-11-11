@@ -1,0 +1,177 @@
+
+.why-choose-section {
+  padding: 100px 0;
+  background: var(--color-background);
+}
+
+.why-choose-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+}
+
+/* CONTENT */
+
+.why-choose-content h2 {
+  max-width: 570px;
+  color: var(--color-text);
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.why-choose-description {
+  max-width: 540px;
+  color: var(--color-text-light);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+/* BENEFITS */
+
+.why-choose-benefits {
+  display: grid;
+  gap: 25px;
+}
+
+.why-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.why-benefit-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  background: var(--color-secondary);
+  border-radius: 12px;
+}
+
+.why-benefit h3 {
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.why-benefit p {
+  max-width: 440px;
+  color: var(--color-text-light);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* IMAGE */
+
+.why-choose-image {
+  position: relative;
+  height: 550px;
+  border-radius: 24px;
+}
+
+.why-choose-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* FLOATING IMAGE CARD */
+
+.why-image-card {
+  position: absolute;
+  left: -35px;
+  bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  background: var(--color-white);
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.why-image-card-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  background: var(--color-secondary);
+  border-radius: 10px;
+}
+
+.why-image-card h4 {
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.why-image-card p {
+  color: var(--color-text-light);
+  font-size: 11px;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 992px) {
+  .why-choose-wrapper {
+    gap: 40px;
+  }
+
+  .why-choose-image {
+    height: 480px;
+  }
+
+  .why-image-card {
+    left: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-section {
+    padding: 70px 0;
+  }
+
+  .why-choose-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .why-choose-content h2 {
+    font-size: 27px;
+  }
+
+  .why-choose-image {
+    height: 400px;
+  }
+
+  .why-image-card {
+    left: 15px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-image {
+    height: 320px;
+  }
+
+  .why-image-card {
+    padding: 13px;
+  }
+
+  .why-benefit {
+    gap: 12px;
+  }
+}
