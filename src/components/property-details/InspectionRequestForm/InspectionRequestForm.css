@@ -1,0 +1,142 @@
+.inspection-request {
+  padding: 25px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+}
+
+/* HEADER */
+
+.inspection-header {
+  margin-bottom: 25px;
+}
+
+.inspection-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: var(--border-radius-md);
+  margin-bottom: 15px;
+}
+
+.inspection-header h2 {
+  font-size: 21px;
+  color: var(--color-text);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.inspection-header p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+/* FORM */
+
+.inspection-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inspection-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inspection-field label {
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.inspection-field input,
+.inspection-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  font-size: 13px;
+  color: var(--color-text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.inspection-field input:focus,
+.inspection-field textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.inspection-field textarea {
+  resize: vertical;
+}
+
+/* SUBMIT BUTTON */
+
+.inspection-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--border-radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.inspection-submit:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.inspection-note {
+  color: var(--color-text-light);
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* SUCCESS STATE */
+
+.inspection-success {
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.inspection-success svg {
+  color: var(--color-primary);
+}
+
+.inspection-success h3 {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.inspection-success p {
+  color: var(--color-text-light);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.inspection-success button {
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .inspection-request {
+    padding: 20px;
+  }
+}
