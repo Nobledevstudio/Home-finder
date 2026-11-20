@@ -1,0 +1,7 @@
+.login-page {
+  width: 100%;
+}
+
+.login-page .auth-submit-button {
+  margin-top: 5px;
+}
