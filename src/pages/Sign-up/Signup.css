@@ -1,0 +1,17 @@
+.signup-page {
+  width: 100%;
+}
+
+.signup-page .auth-form {
+  gap: 17px;
+}
+
+.signup-password-hint {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--color-text-light);
+}
+
+.signup-page .auth-submit-button {
+  margin-top: 5px;
+}
