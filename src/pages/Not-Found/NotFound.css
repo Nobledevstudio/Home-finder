@@ -1,0 +1,161 @@
+/* PAGE CONTAINER */
+
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: var(--color-background);
+}
+
+/* CONTENT */
+
+.not-found-content {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* ICON */
+
+.not-found-icon {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 50%;
+}
+
+/* ERROR CODE */
+
+.not-found-content h1 {
+  font-size: 130px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-primary);
+  letter-spacing: -5px;
+  margin-bottom: 10px;
+}
+
+/* HEADING */
+
+.not-found-content h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 15px;
+}
+
+/* DESCRIPTION */
+
+.not-found-content p {
+  max-width: 460px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--color-text-light);
+}
+
+/* NAVIGATION BUTTONS */
+
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.not-found-primary,
+.not-found-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+
+.not-found-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.not-found-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.not-found-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.not-found-secondary:hover {
+  background-color: var(--color-secondary);
+}
+
+/* BRAND */
+
+.not-found-brand {
+  display: inline-block;
+  margin-top: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--color-text-light);
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .not-found-content h1 {
+    font-size: 100px;
+  }
+
+  .not-found-content h2 {
+    font-size: 25px;
+  }
+
+  .not-found-icon {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-content h1 {
+    font-size: 85px;
+  }
+
+  .not-found-content h2 {
+    font-size: 22px;
+  }
+
+  .not-found-content p {
+    font-size: 13px;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .not-found-primary,
+  .not-found-secondary {
+    width: 100%;
+  }
+
+  .not-found-brand {
+    margin-top: 35px;
+  }
+}
